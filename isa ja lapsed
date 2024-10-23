@@ -1,0 +1,29 @@
+class Father:
+    def __init__(self, name, alive):
+        self.name = name
+        self.alive = alive  
+
+    def America(self):
+        print(f"{self.name} has two houses in America")
+
+    def India(self):
+        print(f"{self.name} has two houses in India")
+
+
+class Son(Father):
+    def Estonia(self):
+        print(f"{self.name} has one house in Estonia")
+
+
+class Daughter(Father):
+    def Sweden(self):
+        print(f"{self.name} has four houses in Sweden")
+
+
+son1 = Son("Alex", True)
+son1.America()
+son1.Estonia() 
+
+daughter1 = Daughter("Rita", True)
+daughter1.America()  
+daughter1.Sweden()   
