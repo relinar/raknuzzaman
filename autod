@@ -1,0 +1,23 @@
+class car:
+    def __init__(self, manufacturer, model, year, for_sale):
+        self.manufacturer = manufacturer
+        self.model = model
+        self.year = year
+        self.for_sale = for_sale
+ 
+    def drive(self):
+        print("You drive {} Car".format(self.model))
+ 
+    def stop(self):
+        print("You stop {} Car".format(self.model))
+ 
+    def car_details(self):
+        return "{} {} {} {}".format(self.manufacturer, self.model, self.year, self.for_sale)
+ 
+auto1=car("Audi", "A7", 1999, True)
+auto2=car("Audi", "R8", 2001, False)
+ 
+print(auto1.car_details())
+print(auto2.car_details())
+
+
