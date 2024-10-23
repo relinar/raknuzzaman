@@ -1,0 +1,46 @@
+class room:
+    company_name= "abccompany"
+    room_number = 108
+    num_item=0
+
+    def __init__(self, item, installed_year, condition):
+
+
+        self.item = item
+        self.installed_year = installed_year
+        self.condition = condition
+
+        room.num_item +=1
+
+
+item1=room("table", 2011, "Perfect")
+item2=room("chair", 2001, "good")
+item3=room("computer", 1999, "bad")
+item4=room("lights", 2000, "fifty-fifty")
+
+
+print("How many items:  ", room.num_item)
+print("----")
+
+print(item1.item)
+print(item1.installed_year)
+print(item1.condition)
+print(room.company_name)
+print("----")
+
+print(item2.item)
+print(item2.installed_year)
+print(item2.condition)
+print(room.company_name)
+print("----")
+
+print(item3.item)
+print(item3.installed_year)
+print(item3.condition)
+print(room.company_name)
+print("----")
+
+print(item4.item)
+print(item4.installed_year)
+print(item4.condition)
+print(room.company_name)
