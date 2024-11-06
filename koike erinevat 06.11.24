@@ -1,0 +1,197 @@
+1.
+
+class Father:
+    def skills(self):
+        print("Father: good at painting")
+    
+class Mother:
+    def skills(self):
+        print("Mother: good at cooking")
+
+class Son(Father, Mother):
+    def show_skills(self):
+        Father.skills(self)
+        Mother.skills(self)
+        John=Son()
+        John.show_skills()
+
+
+2.
+
+class Calculation:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+ 
+    def add(self):
+        total = self.a + self.b
+        print(f"Sum is:", total)
+ 
+class Calculation1(Calculation):
+    def __init__(self, a, b):
+        super().__init__(a, b)
+        self.add()
+ 
+class Calculation2(Calculation1):
+    def __init__(self, a, b, c, d):
+        super().__init__(a, b)
+        self.c = c
+        self.d = d
+ 
+    def add2(self):
+        total = self.a + self.b + self.c + self.d
+        print("Sum is", total)
+ 
+class Calculation3(Calculation2):
+    def __init__(self, a, b, c, d, e, f):
+        super().__init__(a, b, c, d)
+        self.e = e
+        self.f = f
+    def add3(self):
+        total = self.a + self.b + self.c + self.d + self.e + self.f
+        print("Sum is", total)
+       
+cal3 = Calculation3(2, 3, 4, 5, 6, 7)
+cal3.add3()
+
+
+
+3.
+
+class Animal:
+  def __init__(self,name):
+      self.name=name
+
+      def eat(self):
+          print(f"{self.name} is eating")
+        
+      def sleep(self):
+          print(f"{self.name} is sleeping")
+
+
+class Prey(Animal):
+     
+     def flee(self):
+          print(f"{self.name} is fleeing")
+
+
+class Predator(Animal):
+      def hunt(self):
+          print(f"{self.name} is hunting")
+
+class Rabbit(Prey):
+    pass
+
+class Hawk(Predator):
+    pass
+
+class Fish(Prey, Predator):
+    pass
+
+
+fish1=Fish("Kala")
+fish1.hunt()
+fish1.flee()
+rab1=Rabbit("Hiir")
+rab1.flee()
+fish1.eat()
+fish1.sleep()
+
+
+4.
+
+class calculation:
+    def __init__(self,a,b,c,d):
+        self.a=a
+        self.b=b
+        self.c=c
+        self.d=d
+
+class calculation1(calculation):
+    def calculation(self):
+        add=(self.a+self.b+self.c+self.d)
+        print("The answer of the first calculation: ", add)
+
+class calculation2(calculation):
+    def calculation(self):
+        add=(self.a-self.b+self.c-self.d)
+        print("The answer of the second calculation: ", add)
+
+class calculation3(calculation):
+    def calculation(self):
+        add=(self.a*self.b+self.c/self.d)
+        print("The answer of the third calculation: ", add)
+
+class calculation4(calculation):
+    def calculation(self):
+        add=(self.a/self.b+self.c*self.d)
+        print("The answer of the forth calculation: ", add)
+
+
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+d = int(input("Enter fourth number: "))
+
+
+calc1 = calculation1(a, b, c, d)
+calc2 = calculation2(a, b, c, d)
+calc3 = calculation3(a, b, c, d)
+calc4 = calculation4(a, b, c, d)
+
+
+calc1.calculation()
+calc2.calculation()
+calc3.calculation()
+calc4.calculation()
+
+
+5.
+
+class Human:
+    def __init__(self, name, age, height):
+        self.name = name
+        self.age = age
+        self.height = height
+ 
+    def introduce(self):
+        print(f"I am {self.name}, {self.age} years old and {self.height} cm tall.")
+ 
+class Einstein(Human):
+    def __init__(self, name, age, height, iq):
+        super().__init__(name, age, height)
+        self.iq = iq
+ 
+    def genius_info(self):
+        print(f"My name is {self.name}, and I have an IQ of {self.iq}.")
+ 
+class Alex(Human):
+    def __init__(self, name, age, height, is_smart):
+        super().__init__(name, age, height)
+        self.is_smart = is_smart
+ 
+    def smart_info(self):
+        print(f"My name is {self.name}, and I am {self.is_smart}.")
+ 
+class Newton(Human):
+    def __init__(self, name, age, height, formula):
+        super().__init__(name, age, height)
+        self.formula = formula
+ 
+    def formula_info(self):
+        print(f"My name is {self.name}, and my famous formula is {self.formula}.")
+ 
+einstein = Einstein("Albert Einstein", 76, 175, 160)
+alex = Alex("Alex", 25, 180, "Smart")
+newton = Newton("Isaac Newton", 84, 175, "F=ma")
+ 
+einstein.introduce()
+einstein.genius_info()
+ 
+alex.introduce()
+alex.smart_info()
+ 
+newton.introduce()
+newton.formula_info()
+
