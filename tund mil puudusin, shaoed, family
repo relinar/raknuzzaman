@@ -1,0 +1,158 @@
+1.
+"""class Transport:
+    def __init__(self, name):
+        self.name = name
+ 
+    def move(self):
+        print(f"{self.name} is moving")
+ 
+    def stop(self):
+        print(f"{self.name} is stopping")
+ 
+transport1 = Transport("Bus")
+transport1.move()
+transport1.stop()"""
+
+
+
+
+
+
+ 2.
+"""class Transport:
+    def __init__(self, name):
+        self.name = name
+ 
+    def move(self):
+        print(f"{self.name} is moving")
+ 
+    def stop(self):
+        print(f"{self.name} is stopping")
+ 
+class Bus(Transport):
+    def public_transport(self):
+        print("Tallinn has many public transports")
+    def my_opinion(self):
+        print("I do not like bus but many people like bussy")
+class Motorcycle(Transport):
+    pass
+class Car(Transport):
+    def BMW(self):
+        print("BMW is very expensive, I do not have money to buy it")
+ 
+    def Auto_maks(self):
+        print("From 2025 car owner has to pay some extra money")
+class Bicycle(Transport):
+    pass
+ 
+Bus1 = Bus("Bus")
+Motorcycle1 = Motorcycle("Motorcycle")
+Car1 = Car("Car")
+Bicycle1 = Bicycle("Bicycle")
+Bus1.move()
+Bus1.stop()
+Bus1.my_opinion()
+Motorcycle1.move()
+Motorcycle1.stop()
+Car1.Auto_maks()
+Car1.move()
+Car1.stop()
+Bicycle1.move()
+Bicycle1.stop()"""
+
+
+
+
+
+
+
+
+3.
+"""class Person:
+    def __init__(self,name,age,profession):
+        self.name = name
+        self.age = age
+        self.profession = profession
+ 
+    def details(self):
+        print (f"Name: {self.name}, "
+                f"Age: {self.age}, "
+                f"Profession: {self.profession}")
+class Father(Person):
+    pass
+class Mother(Person):
+    pass
+class Son(Person):
+    pass
+ 
+Person1 = Person("Peter", 40, "Mechanic")
+Father1 = Father("John", 60, "Salesman")
+Mother1 = Mother("Anna", 59, "Employee")
+Son1 = Son("Josh", 14, "Student")
+ 
+Person1.details()
+Father1.details()
+Mother1.details()
+Son1.details()"""
+
+
+
+
+
+
+
+4.
+"""class Shape:
+    def __init__(self,dim1,dim2):
+        self.dim1 = dim1
+        self.dim2 = dim2
+class Triangle(Shape):
+    def Triangle_area(self):
+        area = .5 * self.dim1*self.dim2
+        print("Area of Triangle is:", area, "cm2")
+class Rectangle(Shape):
+    def Rectangle_area(self):
+        area = self.dim1*self.dim2
+        print("Area of Rectangle is:", area)
+    def Rectangle_perimeter(self):
+        perimeter = 2 * (self.dim1+self.dim2)
+        print("Perimeter of rectangle is:", perimeter)
+class Square(Shape):
+    def Square_area(self):
+        area = self.dim1 * self.dim2
+        print("Area of Square is:", area)
+    def square_perimeter(self):
+        perimeter = 4 * self.dim1
+        print("Perimeter of Square is:", perimeter)
+class Circle(Shape):
+    def Circle_area(self):
+        area = 3.14 * self.dim1 * self.dim1
+        print("Area of Circle is:", area)
+    def Circle_Perimeter(self):
+        perimeter = 2 * 3.14 * self.dim1
+        print("Perimeter of Circle is:", perimeter)
+ 
+Circle1 = Circle(5, 5)
+Circle1.Circle_area()
+Triangle1 = Triangle(2, 5)
+Triangle1.Triangle_area()"""
+
+
+
+
+
+
+5.
+"""class Father:
+    def skills(self):
+        print("Father: good at painting")
+class Mother:
+    def skills(self):
+        print("Mother: good at cooking")
+class Son(Father, Mother):
+    def show_skills(self):
+        Father.skills(self)
+        Mother.skills(self)
+ 
+Child = Son()
+Child.show_skills()"""
