@@ -1,0 +1,312 @@
+1.      
+
+class Human:
+    def __init__(self, name, age, id_num, salary):
+        self.name = name
+        self.age = age
+        self.id_num = id_num
+        self.salary = salary
+ 
+
+class Boy(Human):
+    def __init__(self, name, age, id_num, salary, bonus):
+        super().__init__(name, age, id_num, salary)
+        self.bonus = bonus
+    def total_salary(self):
+        self.salary += self.bonus
+        print(f"My total salary is: {self.salary}")
+
+
+
+class Girl(Human):
+    def __init__(self, name, age, id_num, salary, tips):
+        super().__init__(name, age, id_num, salary)
+        self.tips = tips
+    def total_salary(self):
+        self.salary += self.tips
+        print(f"My total salary is: {self.salary}")
+
+class Intern(Human):
+    def __init__(self, name, age, id_num, salary):
+        super().__init__(name, age, id_num, salary)
+    def total_salary(self):
+        print(f"My salary is: {self.salary}")
+
+
+
+abiturient=Intern("Rasmus", 55, 43359793, 1200)
+boy=Boy("Jaanus", 20, 746345074, 1700, 288)
+girl=Girl("Tiina", 50, 4697057456, 1300, 100)
+
+boy.total_salary()
+girl.total_salary()
+abiturient.total_salary()
+
+
+2.
+from abc import ABC, abstractmethod
+ 
+class Transport(ABC):
+    @abstractmethod
+    def move(self):
+        pass
+    @abstractmethod
+    def stop(self):
+        pass
+ 
+class Bus(Transport):
+ 
+    def move(self):
+        print("Bus is moving")
+ 
+    def stop(self):
+        print("Bus is stopping")
+ 
+class Train(Transport):
+ 
+    def move(self):
+        print("Train is moving")
+ 
+    def stop(self):
+        print("Train is stopping")
+ 
+class Aeroplane(Transport):
+ 
+    def move(self):
+        print("Aeroplane is moving")
+ 
+    def stop(self):
+        print("Aeroplane is stopping")
+ 
+ 
+bus = Bus()
+train = Train()
+aeroplane = Aeroplane()
+ 
+
+bus.move()
+bus.stop()
+train.move()
+train.stop()
+aeroplane.move()
+aeroplane.stop()
+
+
+3.
+
+from abc import ABC, abstractmethod
+ 
+class Electric_Car(ABC):
+    def __init__(self,brand,year,battery_life):
+        self.brand = brand
+        self.year = year
+        self.battery_life = battery_life
+    @abstractmethod
+    def move(self):
+        pass
+    @abstractmethod
+    def stop(self):
+        pass
+ 
+class BMW(Electric_Car):
+ 
+    def move(self):
+        print(f"{self.brand} is moving")
+ 
+    def stop(self):
+        print(f"{self.brand} is stopping")
+ 
+    def battery(self):
+        print(f"{self.brand} battery life is: {self.battery_life}")
+ 
+       
+ 
+class Tesla(Electric_Car):
+ 
+    def move(self):
+        print(f"{self.brand} is moving")
+ 
+    def stop(self):
+        print(f"{self.brand} is stopping")
+ 
+    def battery(self):
+        print(f"{self.brand} battery life is: {self.battery_life}")
+ 
+class Toyota(Electric_Car):
+ 
+    def move(self):
+        print(f"{self.brand} is moving")
+ 
+    def stop(self):
+        print(f"{self.brand} is stopping")
+ 
+    def battery(self):
+        print(f"{self.brand} battery life is: {self.battery_life}")
+ 
+bmw = BMW("BMW", 2022, "100%")
+tesla = Tesla("Tesla", 2021, "95%")
+toyota = Toyota("Toyota", 2024, "34%")
+ 
+bmw.move()
+bmw.stop()
+bmw.battery()
+ 
+tesla.move()
+tesla.stop()
+tesla.battery()
+ 
+toyota.move()
+toyota.stop()
+toyota.battery()
+ 
+ 
+4.
+
+from abc import ABC, abstractmethod
+ 
+class Electric_Car(ABC):
+    def __init__(self, brand, year, battery_life, kilometers):
+        self.brand = brand
+        self.year = year
+        self.battery_life = battery_life
+        self.kilometers = kilometers
+        self.distance_passed = (self.battery_life / 100) * self.kilometers
+ 
+    @abstractmethod
+    def move(self):
+        pass
+ 
+    @abstractmethod
+    def stop(self):
+        pass
+ 
+    def display_distance_passed(self):
+        print(f"{self.brand} has passed a distance of: {self.distance_passed} kilometers")
+ 
+class BMW(Electric_Car):
+    def move(self):
+        print(f"{self.brand} is moving")
+ 
+    def stop(self):
+        print(f"{self.brand} is stopping")
+ 
+    def battery(self):
+        print(f"{self.brand} battery life is: {self.battery_life}")
+ 
+class Tesla(Electric_Car):
+    def move(self):
+        print(f"{self.brand} is moving")
+ 
+    def stop(self):
+        print(f"{self.brand} is stopping")
+ 
+    def battery(self):
+        print(f"{self.brand} battery life is: {self.battery_life}")
+ 
+class Toyota(Electric_Car):
+    def move(self):
+        print(f"{self.brand} is moving")
+ 
+    def stop(self):
+        print(f"{self.brand} is stopping")
+ 
+    def battery(self):
+        print(f"{self.brand} battery life is: {self.battery_life}")
+ 
+bmw = BMW("BMW", 2022, 100, 350)
+tesla = Tesla("Tesla", 2021, 95, 250)
+toyota = Toyota("Toyota", 2024, 34, 230)
+ 
+bmw.move()  
+bmw.stop()
+bmw.battery()  
+bmw.display_distance_passed()  
+ 
+tesla.move()
+tesla.stop()  
+tesla.battery()
+tesla.display_distance_passed()
+ 
+toyota.move()  
+toyota.stop()
+toyota.battery()
+toyota.display_distance_passed()  
+
+
+5.
+
+from abc import ABC, abstractmethod
+ 
+class Smart_Phone(ABC):
+    def __init__(self, brand_name, year, battery_level):
+        self.brand_name = brand_name
+        self.year = year
+        self.battery_level = battery_level
+ 
+    @abstractmethod
+    def display_info(self):
+        pass
+ 
+    def charge(self, amount):
+        self.battery_level = (self.battery_level + amount)
+        print(f"{self.brand_name} charged to {self.battery_level}%.")
+ 
+class Iphone(Smart_Phone):
+    def display_info(self):
+        print(f"Iphone {self.brand_name}, Year: {self.year}, Battery Level: {self.battery_level}%")
+ 
+class Samsung(Smart_Phone):
+    def display_info(self):
+        print(f"Samsung {self.brand_name}, Year: {self.year}, Battery Level: {self.battery_level}%")
+ 
+class Xiaomi(Smart_Phone):
+    def display_info(self):
+        print(f"Xiaomi {self.brand_name}, Year: {self.year}, Battery Level: {self.battery_level}%")
+ 
+iphone = Iphone("iPhone 14", 2022, 80)
+samsung = Samsung("Galaxy S22", 2022, 50)
+xiaomi = Xiaomi("Mi 11", 2021, 20)
+ 
+iphone.display_info()
+samsung.display_info()
+xiaomi.display_info()
+ 
+iphone.charge(15)
+samsung.charge(30)
+xiaomi.charge(25)
+
+
+6.
+class Device:
+    def __init__(self, brand_name, year, battery_level):
+        self.brand_name = brand_name
+        self.year = year
+        self.battery_level = battery_level
+ 
+    def charge(self, amount):
+        self.battery_level = min(100, self.battery_level + amount)
+        print(f"{self.brand_name} charged to {self.battery_level}%.")
+ 
+class Electric_Car(Device):
+    def display_info(self):
+        print(f"Electric Car: {self.brand_name}, Year: {self.year}, Battery Level: {self.battery_level}%")
+ 
+class Smart_Phone(Device):
+    def display_info(self):
+        print(f"Smart Phone: {self.brand_name}, Year: {self.year}, Battery Level: {self.battery_level}%")
+ 
+class Laptop(Device):
+    def display_info(self):
+        print(f"Laptop: {self.brand_name}, Year: {self.year}, Battery Level: {self.battery_level}%")
+ 
+tesla = Electric_Car("Tesla Model S", 2022, 80)
+iphone = Smart_Phone("iPhone 14", 2022, 75)
+dell = Laptop("Dell XPS 13", 2021, 60)
+ 
+tesla.display_info()
+iphone.display_info()
+dell.display_info()
+ 
+tesla.charge(10)
+iphone.charge(20)
+dell.charge(30)
