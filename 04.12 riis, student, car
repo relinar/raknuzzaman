@@ -1,0 +1,137 @@
+"""class Car:
+    def __init__(self, brand_name, color, speed):
+        self.brand_name = brand_name
+        self.__color = color
+        self.__speed = speed
+    #setting and getting color
+    def set_color(self,new_color):
+        self.__color = new_color
+       
+    def get_color(self):
+        return self.__color
+   
+    def set_speed(self,new_speed):
+        self.__speed = new_speed
+       
+    def get_speed(self):
+        return self.__speed
+ 
+    def details(self):
+        print(f"Brand name: {self.brand_name}\n color: {self.__color}\n speed: {self.__speed}km/h")
+ 
+toyota = Car(brand_name="Toyota", color="Red", speed=250)
+toyota.details()
+print("New information")
+toyota.set_color("blue")
+toyota.set_speed(300)
+toyota.details()"""
+
+
+
+
+
+
+"""class Person:
+    def __init__(self, name, age):
+        self.__name = name
+        self.__age = age
+        
+    def set_name(self, new_name):
+        self.__name = new_name
+        
+    def get_name(self):
+        return self.__name
+    
+    def set_age(self, new_age):
+        self.__age = new_age
+        
+    def get_age(self):
+        return self.__age
+    
+    def details(self):
+        print(f"Name: {self.get_name()}\nAge: {self.get_age()}")
+
+class Student(Person):
+    def __init__(self, name, age, gpa):
+        super().__init__(name, age)
+        self.__gpa = gpa
+        
+    def set_gpa(self, new_gpa):
+        self.__gpa = new_gpa
+        
+    def get_gpa(self):
+        return self.__gpa
+    
+    def details(self):
+        print(f"Name: {self.get_name()}\n Age: {self.get_age()}\n GPA: {self.get_gpa()}\n")
+
+
+alex = Person(name="Alex", age=15)
+alex.details()
+
+print("New information")
+alex.set_name("David")
+alex.set_age(65)
+alex.details()
+
+student_alex = Student(name="Alex", age=17, gpa=5.0)
+student_alex.details()
+
+print("New information")
+student_alex.set_gpa(4.5)
+student_alex.details()"""
+
+
+
+
+
+
+
+"""class Rectangle:
+    def __init__(self, height, width):
+        self.__height = height
+        self.__width = width
+    def area(self):
+        area = self.__height * self.__width
+        return area
+    def details(self):
+        area = self.area()
+        print(f"Height is: {self.__height}\n Width is: {self.__width}\n Area is: {area}\n")
+    def set_height(self, new_height):
+        self.__height = new_height
+ 
+    def get_height(self):
+        return self.__height
+ 
+    def set_width(self, new_width):
+        self.__width = new_width
+ 
+    def get_width(self):
+        return self.__width
+ 
+Rectangle1 = Rectangle(height=5, width=10)
+Rectangle1.details()
+print("New information")
+Rectangle1.set_height(6)
+Rectangle1.set_width(12)
+Rectangle1.details()"""
+
+
+
+
+
+
+
+"""class Rice_price:
+    def __init__(self, company_name, price):
+        self.company_name = company_name
+        self.__final_price = price + price * 0.1
+    def set_final_price(self, discount):
+        self.discount = discount
+        self.__final_price = self.__final_price - self.__final_price * (self.discount / 100)
+    def get_final_price(self):
+        return self.__final_price
+    
+rice=Rice_price("Fox Rice", 5)
+rice.set_final_price(20)
+print(rice.get_final_price())"""
