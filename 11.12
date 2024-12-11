@@ -1,0 +1,122 @@
+"""class Person:
+    def __init__(self, name, iq):
+        self.name = name
+        self.__iq = iq
+ 
+    def set_iq(self, new_iq):
+        if new_iq > self.__iq and new_iq<=150:
+            self.__iq = new_iq
+ 
+    def get_iq(self):
+        return self.__iq
+   
+    def details(self):
+        print(f"Name: {self.name} IQ: {self.__iq}")
+   
+andreas = Person(name="Andreas", iq=70)
+andreas.details()
+andreas.set_iq(80)
+andreas.details()"""
+
+"""class Tree:
+    def __init__(self, name, height):
+        self.name = name
+        self.__height = height
+   
+    def set_height(self, new_height):
+        if new_height > self.__height and new_height<=150:
+            self.__height = new_height
+ 
+    def get_height(self):
+        return self.__height
+   
+    def details(self):
+        print(f"Name: {self.name}, Height: {self.__height}cm")
+   
+groot = Tree(name="Groot", height=70)
+groot.details()
+groot.set_height(120)
+groot.details()"""
+ 
+"""class Employee:
+    def __init__(self, name, position, salary):
+        self.name = name
+        self.__position = position
+        self.__salary = salary
+   
+    def get_details(self):
+        print(f"Name: {self.name}, Position: {self.__position}, Salary: {self.__salary}")
+   
+    def update_salary(self, new_salary):
+        self.new_salary = new_salary
+        if self.new_salary > self.__salary:
+            self.__salary = new_salary
+        else:
+            print("New salary must be higher than old salary.")
+   
+    def promote(self, new_position, salary_increase):
+        self.__position = new_position
+        self.__salary+=salary_increase
+        print(f"You have been promoted to {self.__position}, and have new salary {self.__salary}")
+
+employee = Employee("David", "Junior developer", 3000)
+employee.get_details()
+employee.update_salary(5000)
+employee.promote("Senior developer", 500)
+employee.get_details()"""
+
+"""class Bank_account:
+    def __init__(self, account_number, initial_balance):
+        self.__account_number = account_number
+        self.__balance = initial_balance
+ 
+    def deposit(self, amount):
+        self.amount = amount
+        if self.amount > 0:
+            self.__balance += self.amount
+            print(f"Your balance has been updated: {self.__balance}")
+        else:
+            print("Your balance amount must be positive.")
+   
+    def withdraw(self, amount):
+        self.amount = amount
+        if self.amount > self.__balance:
+            print("You do not have the sufficient funds.")
+        elif self.amount <= 0:
+            print(f"Your balance must be positive.")
+        else:
+            self.__balance -= self.amount
+            print(f"Your balance has been updated {self.__balance}")
+   
+    def get_balance(self):
+        return self.__balance
+   
+    def get_account_number(self):
+        return self.__account_number
+   
+bank_account = Bank_account(account_number=123456, initial_balance= 1000)
+print(f"Current balance: { bank_account.get_balance()}")
+bank_account.deposit(500)
+print(f"Account number: {bank_account.get_account_number()}")
+print(f"Current balance: { bank_account.get_balance()}")"""
+
+ 
+
+
+
+
+class Triangle:
+    def draw(self):
+        print("Drawing a triangle with red color")
+class Rectangle:
+    def draw(self):
+        print("Drawing a rectangle with blue color")
+class Square:
+    def draw(self):
+        print("Drawing a square with green color")
+class Circle:
+    def draw(self):
+        print("Drawing a circle with white color")
+    def draw_shape(shape):
+        shape.draw()
+    
